@@ -1,0 +1,32 @@
+/* News */
+
+#news-content {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px;
+}
+
+.card-news-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text-news {
+  margin-top: auto;
+}
+
+/* Footer */
+
+footer {
+  height: 80px;
+  background: #444;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  color: #fff;
+  margin-top: 10px;
+}

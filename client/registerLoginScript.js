@@ -54,10 +54,14 @@ function auth() {
     $("#register").show();
     $("#login").show();
     $("#logout").hide();
+    $("#livescore-container").hide();
+    $("#news-container").hide();
   } else {
     $("#login").hide();
     $("#register").hide();
     $("#logout").show();
+    $("#livescore-container").show();
+    $("#news-container").show();
   }
 }
 
@@ -65,21 +69,3 @@ function logout() {
   localStorage.clear();
   auth();
 }
-
-$(document).ready(() => {
-  auth();
-  $("#login-form").on("submit", (e) => {
-    e.preventDefault();
-    login();
-  })
-
-  $("#register-form").on("submit", (e) => {
-    e.preventDefault();
-    register();
-  })
-
-  $("#logout").on("click", (e) => {
-    e.preventDefault();
-    logout();
-  })
-})
