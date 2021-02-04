@@ -8,8 +8,8 @@ class playerController {
       url: 'https://free-nba.p.rapidapi.com/players',
       params: {page: '0', per_page: '25'},
       headers: {
-        'x-rapidapi-key': '68f59c2ee8mshe46be477ed32cc4p1d8bf6jsn229fa9392015',
-        'x-rapidapi-host': 'free-nba.p.rapidapi.com'
+        'x-rapidapi-key': `${process.env.X_RAPID_API_KEY}`,
+        'x-rapidapi-host': `${process.env.X_RAPID_API_HOST}`
       }
     };
     
