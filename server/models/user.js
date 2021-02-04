@@ -27,7 +27,6 @@ module.exports = (sequelize, DataTypes) => {
     },
     password: {
       type: DataTypes.STRING,
-      unique: true,
       validate: {
         notEmpty: {
           msg: 'Password harus diisi!'
