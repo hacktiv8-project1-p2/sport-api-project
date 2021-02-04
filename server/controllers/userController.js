@@ -4,7 +4,6 @@ const { generateToken } = require('../helpers/jwt');
 
 class userController {
   static async register(req, res, next) {
-    console.log(req.body);
     const { full_name, email, password } = req.body;
     try {
       const user = await User.create({ full_name, email, password });
