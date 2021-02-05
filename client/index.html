@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-signin-client_id" content="1033254350842-0vus3k9338up817dovsq8gu8rmho542u.apps.googleusercontent.com">
   <title>Register & Login Page</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
@@ -51,7 +52,7 @@
           <input class="form-control" type="password" name="password" id="loginPassword" placeholder="Password">
         </div>
         <button class="btn btn-primary btn-block" type="submit">Submit</button>
-        <div class="g-signin2 mt-3" data-onsuccess="onSignIn"></div>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
       </form>
     </div>
   </div>
@@ -108,6 +109,9 @@
   <script src="./livescoreScript.js"></script>
   <script src="./basketballNews.js"></script>
   <script src="./players.js"></script>
+  <script src="./googleLogin.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
   <script>
     $(document).ready(function () {
       auth();
