@@ -1,6 +1,7 @@
 
 
 function getPlayers() {
+  $('#players-table').empty()
   $('#submit-search').show()
   $('#back-button').hide()
   $.ajax({
@@ -30,7 +31,6 @@ function getPlayers() {
 
 
 function getSpesific(keyword) {
-  $('#submit-search').hide()
   $('#back-button').show()
   $.ajax({
     method: 'GET',
@@ -41,17 +41,23 @@ function getSpesific(keyword) {
     data: { keyword }
   })
   .done((data) => {
-    const player = data.data[0]
+    const player = data.data
     $('#players-table').empty()
-    $('#players-table').append(`
-      <tr>
-        <td>${player.first_name} ${player.last_name}</td>
-        <td>${player.position}</td>
-        <td>${player.team.full_name}</td>
-      </tr>
-    `)
+    player.forEach(element => {
+      if(element.position.length === 0) element.position = '-'
+      $('#players-table').append(`
+        <tr>
+          <td>${element.first_name} ${element.last_name}</td>
+          <td>${element.position}</td>
+          <td>${element.team.full_name}</td>
+        </tr>
+      `)
+    })
   })
   .fail((xhr, status) => {
     console.log(xhr, status)
+  })
+  .always(_ => {
+    $('#player-keyword').val('')
   })
 }
