@@ -143,7 +143,26 @@ Request Header:
 
 Success Response (200)
 ```
-
+[
+  {
+    "matchId": "22757045",
+    "homeTeamName": "Zhejiang Lions",
+    "awayTeamName": "Guangzhou Loong Lions",
+    "costTime": "",
+    "homeScore": 104,
+    "homeFastScore": 0,
+    "homeInsideScore": 0,
+    "homeLeadingScore": 0,
+    "homeTotalMiss": 9,
+    "awayScore": 89,
+    "awayFastScore": 0,
+    "awayInsideScore": 0,
+    "awayLeadingScore": 0,
+    "awayTotalMiss": 16,
+    "homePlayers": [...]
+  },
+  ...
+]
 ```
 Error responses:
 * 400
