@@ -16,7 +16,7 @@
 
 <b><u>POST /user/register</u></b>
 
-Untuk mendaftarkan diri anda sebagai pengguna basketball  app kami. Semua input harus diisi, dan <u>e-mail</u> bersifat unique, yang berarti tidak bisa ada 2 e-mail yang sama yang akan terdaftar di database kami. Endpoint ini menerima 3 request body, yaitu:
+Untuk mendaftarkan diri anda sebagai pengguna basketball app kami. Semua input harus diisi, dan <u>e-mail</u> bersifat unique, yang berarti tidak bisa ada 2 e-mail yang sama yang akan terdaftar di database kami. Endpoint ini menerima 3 request body, yaitu:
 
 - full_name
 - email
