@@ -7,7 +7,6 @@ class playerController {
     const options = {
       method: 'GET',
       url: 'https://free-nba.p.rapidapi.com/players',
-      // params: { search: keyword } || null,
       params: { search: keyword },
       headers: {
         'x-rapidapi-key': `${process.env.X_RAPID_API_KEY}`,
