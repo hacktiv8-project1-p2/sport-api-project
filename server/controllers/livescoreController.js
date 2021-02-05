@@ -3,10 +3,11 @@ const { response } = require('express');
 
 class LiveScoreController {
     static showScores(req, res) {
+        let today = new Date().toISOString().slice(0, 10)
         axios.get('http://api.isportsapi.com/sport/basketball/stats', {
             params: {
                 api_key: process.env.SECRET_SCORES,
-                date: "2021-02-04"
+                date: today
             }
         })
             .then(response => {
