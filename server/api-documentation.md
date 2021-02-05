@@ -74,6 +74,7 @@ Success Response (200)
 ]
 ```
 Error responses:
+* 400
 * 500
 
 ---

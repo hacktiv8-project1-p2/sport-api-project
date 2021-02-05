@@ -70,33 +70,35 @@
       </div>
     </div>
   </section>
+  <section id="liveScore-news" class="container" style="display: grid; grid-template-columns: 1fr 1fr;">
+    <div class="container" id="livescore-container" style="width: 600px;">
+      <h2 class="text-center my-4">LIVE SCORE</h2> 
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th>Home Team</th>
+            <th>Score</th>
+            <th>Away Team</th>
+          </tr>
+        </thead>
+        <tbody id="table-scores">
+        </tbody>
+      </table>  
+    </div class="container">
   
-  <div class="container" id="livescore-container" style="width: 600px;">
-    <table class="table table-bordered table-hover">
-      <thead class="thead-dark">
-        <tr>
-          <th>Home Team</th>
-          <th>Score</th>
-          <th>Away Team</th>
-        </tr>
-      </thead>
-      <tbody id="table-scores">
-      </tbody>
-    </table>  
-  </div class="container">
-
-  <div class="container" id="news-container">
-    <h2 class="text-center my-4">BASKETBALL NEWS</h2>
-    <div id="news-content"></div>
-  </div>
+    <div class="container" id="news-container">
+      <h2 class="text-center my-4">BASKETBALL NEWS</h2>
+      <div id="news-content"></div>
+    </div>
+  </section>
 
   <div class="container" id="players-container">
-    <h3 class="text-center my-4">Players</h3>
+    <h3 class="text-center my-4">NBA PLAYERS</h3>
     <form id="search-player" class="mb-2">
       <input type="text" id="player-keyword" class="rounded">
-      <input id="submit-search" type="submit" class="btn btn-dark text-white" value="Search">
+      <button id="submit-search" type="submit" class="btn btn-dark text-white" value="Search">Search</button>
+      <button id="back-button" class="btn btn-dark text-white">Back</button>
     </form>
-    <button id="back-button" class="btn btn-dark text-white mb-2">Back</button>
     <table class="table table-bordered">
       <thead class="thead-dark">
         <tr>

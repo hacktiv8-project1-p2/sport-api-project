@@ -12,8 +12,7 @@ function getNews() {
         <div class="card">
           <img class="card-img-top img-fluid" src="${element.imageUrl}" alt="">
           <div class="card-body card-news-content">
-            <h4 class="card-title">${element.title}</h4>
-            <p class="card-text card-text-news">${element.abstract}</p>
+            <h6 class="card-title">${element.title}</h6>
             <a class="card-text btn btn-block btn-primary card-text-news" href="${element.url}" target="_blank">Read More</a>
           </div>
         </div>
