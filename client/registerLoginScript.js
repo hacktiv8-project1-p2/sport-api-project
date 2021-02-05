@@ -16,6 +16,7 @@ function register() {
   })
     .done(response => {
       auth();
+      afterRegister();
     })
     .fail((xhr, text) => {
       console.log(xhr, text);
@@ -49,19 +50,32 @@ function login() {
     })
 }
 
+function afterRegister() {
+  $('#register').hide();
+  $('#login').show();
+}
+
 function auth() {
   if (!localStorage.getItem('access_token')) {
     $("#register").show();
-    $("#login").show();
+    $("#login").hide();
     $("#logout").hide();
+    $('#loginNav').show();
+    $('#registerNav').show();
     $("#livescore-container").hide();
     $("#news-container").hide();
+    $("#players-container").hide();
+    $('#register-login-content').show();
   } else {
+    $('#register-login-content').hide();
     $("#login").hide();
     $("#register").hide();
+    $('#loginNav').hide();
+    $('#registerNav').hide();
     $("#logout").show();
     $("#livescore-container").show();
     $("#news-container").show();
+    $("#players-container").show();
   }
 }
 
