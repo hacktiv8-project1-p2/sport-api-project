@@ -17,9 +17,12 @@ function register() {
     .done(response => {
       auth();
       afterRegister();
+      $('#error-message-register').text('');
+      $('#error-message').text('');
     })
     .fail((xhr, text) => {
       console.log(xhr, text);
+      $('#error-message-register').text(xhr.responseJSON.error);
     })
     .always(() => {
       $("#register-form").trigger('reset');
@@ -40,10 +43,13 @@ function login() {
   })
     .done(response => {
       localStorage.setItem('access_token', response.access_token);
+      $('#error-message').text('');
+      $('#error-message-register').text('');
       auth();
     })
     .fail((xhr, text) => {
-      console.log(xhr, text);
+      console.log(xhr.responseJSON, text);
+      $('#error-message').text(xhr.responseJSON.error);
     })
     .always(() => {
       $("#login-form").trigger('reset');
@@ -76,6 +82,8 @@ function auth() {
     $("#livescore-container").show();
     $("#news-container").show();
     $("#players-container").show();
+    $('#error-message').text('');
+    $('#error-message-register').text('');
   }
 }
 

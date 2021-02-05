@@ -15,7 +15,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   User.init({
-    full_name: DataTypes.STRING,
+    full_name: {
+      type: DataTypes.STRING,
+      validate: {
+        notEmpty: {
+          msg: 'Full name tidak boleh kosong!'
+        }
+      }
+    },
     email: {
       type: DataTypes.STRING,
       validate: {

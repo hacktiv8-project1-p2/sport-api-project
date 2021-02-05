@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
       <div class="container">
-        <a class="navbar-brand" href="#">Aurora Inc.</a>
+        <a class="navbar-brand" href="#"><h2>Aurora Inc.</h2></a>
           <ul class="navbar-nav">
               <li class="nav-item" id="registerNav">
                   <a class="nav-link" href="#" id="#registerLink">Register</a>
@@ -28,7 +28,8 @@
       <div class="container">
         <div id="register">
         <form id="register-form">
-          <h1 class="text-center mt-5">Register Form</h1>
+          <h1 class="text-center mt-5">Register</h1>
+          <p id="error-message-register" class="text-danger"></p>
           <div class="form-group">
             <label for="full_name">Full Name</label>
             <input class="form-control form-control" type="text" name="full_name" id="registerFullName" placeholder="Enter full name">
@@ -42,12 +43,15 @@
             <label for="password">Password</label>
             <input class="form-control" type="password" name="password" id="registerPassword" placeholder="Password">
           </div>
-          <button class="btn btn-primary btn-block" type="submit">Submit</button>
+          <div class="text-center">
+            <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+          </div>
         </form>
       </div>
       <div id="login">
         <form id="login-form">
-          <h1 class="text-center mt-5">Login Form</h1>
+          <h1 class="text-center mt-5">Login</h1>
+          <p id="error-message" class="text-danger"></p>
           <div class="form-group">
             <label for="email">Email address</label>
             <input class="form-control form-control" type="email" name="email" id="loginEmail" placeholder="Enter email">
@@ -57,7 +61,10 @@
             <label for="password">Password</label>
             <input class="form-control" type="password" name="password" id="loginPassword" placeholder="Password">
           </div>
-          <button class="btn btn-primary btn-block" type="submit">Submit</button>
+          <div class="text-center">
+            <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+          </div>
+          <h5>Or sign in with:</h5>
           <div class="g-signin2 mt-3" data-onsuccess="onSignIn"></div>
         </form>
       </div>
@@ -85,11 +92,11 @@
 
   <div class="container" id="players-container">
     <h3 class="text-center my-4">Players</h3>
-    <form id="search-player">
-      <input type="text" id="player-keyword">
-      <input id="submit-search" type="submit" value="Search">
+    <form id="search-player" class="mb-2">
+      <input type="text" id="player-keyword" class="rounded">
+      <input id="submit-search" type="submit" class="btn btn-dark text-white" value="Search">
     </form>
-    <button id="back-button">Back</button>
+    <button id="back-button" class="btn btn-dark text-white mb-2">Back</button>
     <table class="table table-bordered">
       <thead class="thead-dark">
         <tr>

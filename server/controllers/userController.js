@@ -68,11 +68,7 @@ class userController {
       })
       .then(user => {
         if (user) {
-          const access_token = generateToken({
-            id: user.id,
-            email: user.email
-          });
-          res.status(200).json({ access_token });
+          return user;
         } else {
           return User.create({
             full_name,
@@ -81,10 +77,10 @@ class userController {
           })
         }
       })
-      .then(registeredUser => {
+      .then(user => {
         const access_token = generateToken({
-          id: registeredUser.id,
-          email: registeredUser.email
+          id: user.id,
+          email: user.email
         });
         res.status(201).json({ access_token });
       })
