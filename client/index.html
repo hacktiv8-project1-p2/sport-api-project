@@ -75,6 +75,26 @@
     <div id="news-content"></div>
   </div>
 
+  <div class="container" id="players-container">
+    <h3 class="text-center my-4">Players</h3>
+    <form id="search-player">
+      <input type="text" id="player-keyword">
+      <input id="submit-search" type="submit" value="Search">
+    </form>
+    <button id="back-button">Back</button>
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Team</th>
+        </tr>
+      </thead>
+      <tbody id="players-table">
+      </tbody>
+    </table>
+  </div>
+
   <footer>
     <p>Copyright Aurora Inc. &copy; 2021</p>
   </footer>
@@ -87,6 +107,7 @@
   <script src="./registerLoginScript.js"></script>
   <script src="./livescoreScript.js"></script>
   <script src="./basketballNews.js"></script>
+  <script src="./players.js"></script>
   <script>
     $(document).ready(function () {
       auth();
@@ -104,8 +125,20 @@
         e.preventDefault();
         logout();
       })
+
+      $("#search-player").submit((e) => {
+        e.preventDefault()
+        getSpesific($('#player-keyword').val())
+      })
+
+      $('#back-button').click((e) => {
+        e.preventDefault()
+        getPlayers()
+      })
+
       getLiveScores()
       getNews();
+      getPlayers()
     });
   </script>
   
