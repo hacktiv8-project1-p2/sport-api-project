@@ -1,7 +1,7 @@
 function getLiveScores() {
   $.ajax({
     method: "GET",
-    url: "http://localhost:3000/livescore",
+    url: "https://nba-app-stanly.herokuapp.com/livescore",
     headers: {
       access_token: localStorage.getItem("access_token")
     }

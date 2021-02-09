@@ -1,4 +1,4 @@
-const base_url = 'http://localhost:3000/';
+const base_url = 'https://nba-app-stanly.herokuapp.com/';
 
 function register() {
   const full_name = $("#registerFullName").val();

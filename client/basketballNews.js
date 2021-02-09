@@ -1,7 +1,7 @@
 function getNews() {
   $.ajax({
     method: "GET",
-    url: "http://localhost:3000/news",
+    url: "https://nba-app-stanly.herokuapp.com/news",
     headers: {
       access_token: localStorage.getItem('access_token')
     }
