@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container">
         <a class="navbar-brand" href="#"><h2>Aurora Inc.</h2></a>
           <ul class="navbar-nav">
@@ -25,7 +25,7 @@
       </div>
     </nav>
     <section id="register-login-content">
-      <div class="container">
+      <div class="container" style="max-width: 400px;">
         <div id="register">
         <form id="register-form">
           <h1 class="text-center mt-5">Register</h1>
@@ -64,7 +64,7 @@
           <div class="text-center">
             <button class="btn btn-primary btn-lg" type="submit">Submit</button>
           </div>
-          <h5>Or sign in with:</h5>
+          <h5 class="mt-2">Or sign in with:</h5>
           <div class="g-signin2 mt-3" data-onsuccess="onSignIn"></div>
         </form>
       </div>
@@ -170,7 +170,7 @@
 
       getLiveScores()
       getNews();
-      getPlayers()
+      getPlayers();
     });
   </script>
   
